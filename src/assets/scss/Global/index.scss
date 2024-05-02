@@ -1,0 +1,51 @@
+@import "./app-grid.scss", "./controls.scss", "./inputs.scss", "./scrollbars.scss", "./state.scss", "./variants.scss",
+  "./basic.scss", "./search-tabheaders.scss", "./album-grid.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+#vue-recycle-scroller__item-wrapper {
+  overflow: visible !important;
+}
+
+html {
+  cursor: default !important;
+  overflow: hidden;
+
+  & > * {
+    overflow: visible !important;
+    -webkit-tap-highlight-color: transparent; /* Webkit browsers like Safari */
+    tap-highlight-color: transparent; /* Some Android browsers */
+    outline: none;
+  }
+}
+
+html.loading,
+html.loading * {
+  cursor: progress !important;
+}
+
+body {
+  font-family: "SF Compact Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  color: $white;
+  image-rendering: -webkit-optimize-contrast;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  background-color: $body;
+
+  #app {
+    width: 100%;
+    height: 100%;
+  }
+}

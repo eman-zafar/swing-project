@@ -1,0 +1,65 @@
+@mixin ximage {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// media query mixins
+@mixin smallPhone {
+  @media only screen and (max-width: 550px) {
+    @content;
+  }
+}
+
+@mixin isSmallestPhone {
+  @media only screen and (max-width: 440px) {
+    @content;
+  }
+}
+
+@mixin allPhones {
+  @media only screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+@mixin largePhones {
+  // 550px <= width < 900px
+  @media only screen and (min-width: 550px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media only screen and (max-width: 1080px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (max-width: 810px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-down {
+  @media only screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media only screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+// hide scrollbar
+@mixin hideScrollbars {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}
